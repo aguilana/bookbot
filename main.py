@@ -34,16 +34,15 @@ def main():
     path = "books/frankenstein.txt"
     text = get_book_text(path)
     num_words = count_words(text)
-    print(f"-- Begin report of {path} --")
-    print(f"{num_words} found in the document")
-    print()
+    print(f"-- Begin report of {path} --\n")
+    print(f"{num_words} words found in the document\n")
     char_count = get_chars_dict(text)
     char_dict_sorted = sort_chars_dict(char_count)
 
     for char, count in char_dict_sorted.items():
         if char.isalpha():
             print(f"{char} appears {count} times in document")
-    print("-- End report --")
+    print("\n-- End report --")
 
 
 main()
